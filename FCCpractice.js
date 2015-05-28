@@ -35,3 +35,17 @@ function plaindrome(str) {
         return false;
     }
 };
+
+
+function findLongestWord(str) {
+   var strArray = str.split(" ");  //splits string into an array of strings
+   var longest = 0;  
+   var word = null;
+   for (i = 0; i < strArray.length; ++i) { //loops through string
+       if (strArray[i].length > longest) {  //looks for the length of each string and compares it to the previous
+           word = strArray[i];    // sets the new value of word and longest
+           longest = strArray[i].length;
+       }
+   }
+    return word;
+}
