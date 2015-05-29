@@ -53,9 +53,7 @@ function findLongestWord(str) {
 
 // return string with first letter capitalized
 function titleCase(str) {
-    var stringToArray = str.split(" ");  // splits string into an array of strings
-    for (i = 0; i < stringToArray.length; ++i) {
-        stringToArray[i].charAt(1).toUpperCase();
-    }
-    return stringToArray.join(" ");
+    return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
