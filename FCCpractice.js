@@ -57,3 +57,13 @@ function titleCase(str) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 }
+
+
+// check if a string (first argument) ends with the given target string (second argument).
+function end(str, target) {
+    var strArr = str.split(" ");
+    var ArrLenth = strArr.length;
+    if (str.substr(-1) == target || strArr[ArrLenth -1] == target) {
+        return true;
+    }
+}
