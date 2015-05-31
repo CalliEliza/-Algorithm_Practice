@@ -1,0 +1,22 @@
+// 31 // Sum all the prime numbers up to and including the provided number.
+var is_prime = function (numb) {
+    if (numb === 2) {
+        return true;
+    }
+    for (i = 2; i < numb; ++i) {
+        if (numb % i === 0 ) {
+            return false;
+        }
+    }
+    return true;
+};
+
+function sumPrimes(num) {
+    count = 0;
+    for (j =2; j<= num; ++j) {
+        if (is_prime(j)) {
+            count += j;
+        }
+    }
+    return count;
+}
