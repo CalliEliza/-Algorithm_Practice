@@ -1,1 +1,33 @@
 
+//  11 Truncate a string (first argument) if it is longer than the given maximum string length (second argument).
+// Return the truncated string with a '...' ending
+function truncate(str, num) {
+    var ending = "...";
+    if (str.length > num) {
+        return str.slice(0, num) + ending;
+    }
+    else {
+        return str;
+    }
+}
+
+// 12 Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a multidimensional array
+function chunk(arr, size) {
+    var splitArray = arr.slice(" ");
+    var splitNewArr = [];
+    for (i = 0 ; i < arr.length ; ++i) {
+        splitNewArr[i] = splitArray[i].slice(size);
+    }
+    return splitNewArr;
+}
+
+// console.log(chunk(['a', 'b', 'c', 'd'], 2));
+
+
+// 13 Return the remaining elements of an array after chopping off n elements from the head.
+function slasher(arr, howMany) {
+    // it doesn't always pay to be first
+    return arr;
+}
+
+slasher([1, 2, 3], 2);
