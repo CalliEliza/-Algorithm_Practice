@@ -67,3 +67,18 @@ function end(str, target) {
         return true;
     }
 }
+
+// Repeat a given string (first argument) n times (second argument). Return an empty string if n is a negative number.
+var empty = "";
+var repstring = "";
+function repeat(str, num) {
+    if (num > 0) {
+        for (i = 0; i < num; ++i) {
+            repstring += str;
+        }
+    }
+    else {
+        return empty;
+    }
+    return repstring;
+}
