@@ -40,3 +40,22 @@ function SurfaceArea(width,length, height, NumWindows, NumDoors, WinWidth, Winhe
     var total =  SurfAr - WinArea - DoorArea;
     return total;
 }
+
+// 1.11 //
+function CarVsTrain(CarDist,CarFuel,TrainPrice) {
+    var gas = 4;
+    var CarMaint = .05 * CarDist;
+    var GallonsUsed = CarDist / CarFuel;
+    var CostCar = (GallonsUsed * gas) + CarMaint;
+    var EffiecentOption = [];
+    if (CostCar > TrainPrice) {
+        EffiecentOption.push('Train');
+    }
+    else if (TrainPrice > CostCar) {
+        EffiecentOption.push('Car');
+    }
+    else if (TrainPrice == CostCar) {
+        EffiecentOption.push('no difference');
+    }
+    return EffiecentOption;
+}
