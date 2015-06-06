@@ -31,3 +31,12 @@ function DrainAct(account, interest, expense) {
         return yearsToZero;
     }
 }
+
+// 1.10 //
+function SurfaceArea(width,length, height, NumWindows, NumDoors, WinWidth, Winheight, DoorWidth, DoorHeight) {
+    var SurfAr = width * length * height;
+    var WinArea = NumWindows * Winheight * WinWidth;
+    var DoorArea = NumDoors * DoorHeight * DoorWidth;
+    var total =  SurfAr - WinArea - DoorArea;
+    return total;
+}
