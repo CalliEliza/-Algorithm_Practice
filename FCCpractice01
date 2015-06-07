@@ -56,3 +56,13 @@ function sumAll(arr) {
     }
     return sum;
 }
+
+
+//26 //  Check if a value is classified as a boolean primitive. Return true or false.
+function boo(bool) {
+    var boolTrue = false;
+    if (typeof bool === "boolean") {
+        boolTrue = true;
+    }
+    return boolTrue;
+}
