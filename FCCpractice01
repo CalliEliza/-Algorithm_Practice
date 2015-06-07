@@ -36,3 +36,23 @@ function slasher(arr, howMany) {
 }
 
 slasher([1, 2, 3], 2);
+
+
+// 19 // We'll pass you an array of two numbers. Return the sum of those two numbers and all numbers between them.
+function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+}
+
+function getMinOfArray(numArray) {
+    return Math.min.apply(null, numArray);
+}
+
+function sumAll(arr) {
+    var min = getMinOfArray(arr);
+    var max = getMaxOfArray(arr);
+    var sum = 0;
+    for (i = max; i >= min; --i) {
+        sum += i;
+    }
+    return sum;
+}
