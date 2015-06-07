@@ -59,3 +59,13 @@ function CarVsTrain(CarDist,CarFuel,TrainPrice) {
     }
     return EffiecentOption;
 }
+
+// 1.12 //
+function CarUsedWork(WorkDist, DaysWorked, MilesTravelled) {
+    var DistTravelledWork = DaysWorked * WorkDist;
+    var NonWorkTravel = MilesTravelled - DistTravelledWork;
+    var WorkRatio = DistTravelledWork / MilesTravelled;
+    var NonWorkRatio = NonWorkTravel / MilesTravelled;
+    var answer = "I spent " +WorkRatio+ " of my travel driving to work, and " +NonWorkRatio+ " of my travel driving for personal use.";
+    return answer;
+}
