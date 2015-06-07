@@ -14,7 +14,7 @@ function truncate(str, num) {
 // 12 Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a multidimensional array
 function chunk(arr, size) {
     var multidimArray = [];
-    for (i = 0; i < arr.length / 2; ++i) {
+    for (i = 0; i < arr.length / size; ++i) {
         multidimArray[i] = [];
         for (j = 0; j < size.length ; ++j) {
             multidimArray[i][j] = arr[(i * size) + j];
