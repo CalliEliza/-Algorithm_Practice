@@ -38,6 +38,21 @@ function slasher(arr, howMany) {
 slasher([1, 2, 3], 2);
 
 
+// 15 // Remove all falsey values from an array.
+function IsFalse(item) {
+    return item != false;
+
+}
+
+function bouncer(arr) {
+    var empty = [];
+   var noFalse = arr.filter(IsFalse);
+    if (noFalse[0] === null) {
+        return empty;
+    }
+   return noFalse;
+}
+
 // 19 // We'll pass you an array of two numbers. Return the sum of those two numbers and all numbers between them.
 function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);
