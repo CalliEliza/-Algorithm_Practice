@@ -17,6 +17,9 @@ function chunk(arr, size) {
     for (i = 0; i < arr.length / size; ++i) {
         multidimArray[i] = [];
         for (j = 0; j < size.length ; ++j) {
+        if (arr[i*size +j] === undefined) {
+                return multidimArray;
+            }
             multidimArray[i][j] = arr[(i * size) + j];
         }
     }
