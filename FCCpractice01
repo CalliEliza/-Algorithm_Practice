@@ -39,13 +39,19 @@ slasher([1, 2, 3], 2);
 
 // 14 // Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
 function mutation(arr) {
+    var match = true;
     var dups = [];
-    var match = false;
-    for (i = 0; i < arr[1].length; ++i) {
-        if (arr[1].charAt(i) === arr[0].charAt(i)) {
-            match = true;
+    var arr0 = arr[0].toLowerCase();
+    var arr1 = arr[1].toLowerCase();
+    for (var i = 0; i < arr1.length; ++i) {
+        for (var j = 0; j < arr0.length; ++j) {
+            if (arr1.charAt(i) === arr0.charAt(j)) {
+                dups.push(arr[0].charAt(j));
+            }
         }
-        else { match = false; }
+    }
+    if (dups.length < arr[1].length) {
+        match = false;
     }
     return match;
 }
