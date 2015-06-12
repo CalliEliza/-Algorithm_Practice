@@ -58,27 +58,34 @@ function number_to_name(number) {
 //computes computer_choice, takes players choice and determines winner
 function  rpsls(player_choice) {
     // computer's number, random
-    var computer_num = Math.round(Math.random(0,5));
+    computer_num = Math.round(Math.random(0,5));
 
 // converts player's choice into a number
-    var player_num = name_to_number(player_choice);
+    player_num = name_to_number(player_choice);
 
 // converts computer's number to choice
-    var comp_choice = number_to_name(comp_num);
+    comp_choice = number_to_name(computer_num);
 
 // computes diff between comp and play and divides by modulo 5
-    var dif_player_comp = (comp_num - player_num) % 5;
+    dif_player_comp = (computer_num - player_num) % 5;
 
 // set winner variable
-    var winner = undefined;
+    var winner;
+    if (dif_player_comp < 0 ) {
+        dif_player_comp = dif_player_comp * -1;
+    }
     if ( dif_player_comp === 1 || dif_player_comp === 2) {
-        winner = comp_choice;
+         winner = comp_choice;
+        return console.log("The winner is " +winner+ ".");
     }
     else if (dif_player_comp === 3 || dif_player_comp === 4) {
         winner = player_choice;
+        return console.log("The winner is " +winner+ ".");
     }
-    return winner;
+    else if  (comp_choice === player_choice) {
+        return console.log("It's a tie!");
+    }
 }
 
 
-console.log(rpsls("rock"));
+console.log(rpsls());
